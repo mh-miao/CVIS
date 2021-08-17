@@ -22,6 +22,6 @@ python refine_inpainting.py
 ```
 The pretrained model can be downloaded at XXX
 ## Vehicle Parsing Network
-### Requirements
+## Requirements
 ## Dataset
 ## Contact
