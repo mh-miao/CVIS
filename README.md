@@ -15,7 +15,7 @@ python partgcn.py
 ```
 ### Refinement
 ```
-refine_inpainting.py
+python refine_inpainting.py
 ```
 The pretrained model can be downloaded at XXX
 ## Vehicle Parsing Network
