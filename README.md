@@ -7,14 +7,17 @@
 - opencv-python
 ### Training
 ```
+cd InpaintingNetwork
 python train.py
 ```
 ### Inpainting
 ```
+cd InpaintingNetwork
 python partgcn.py
 ```
 ### Refinement
 ```
+cd InpaintingNetwork
 python refine_inpainting.py
 ```
 The pretrained model can be downloaded at XXX
