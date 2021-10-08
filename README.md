@@ -21,6 +21,6 @@ python partgcn.py
 ```
 python refine_inpainting.py
 ```
-The pretrained model can be downloaded at ![Google Drive](https://drive.google.com/file/d/1GhF1bSdcDPwG4wme8RJsDL5nZyFrkxIu/view?usp=sharing)
+The pretrained model can be downloaded at [Google Drive](https://drive.google.com/file/d/1GhF1bSdcDPwG4wme8RJsDL5nZyFrkxIu/view?usp=sharing)
 ## Contact
 For questions regarding our work, please contact the authors (miaohui_@buaa.edu.cn).
