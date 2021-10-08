@@ -21,7 +21,5 @@ python partgcn.py
 python refine_inpainting.py
 ```
 The pretrained model can be downloaded at XXX
-## Vehicle Parsing Network
-## Requirements
-## Dataset
 ## Contact
+For questions regarding our work, please contact the authors (miaohui_@buaa.edu.cn).
