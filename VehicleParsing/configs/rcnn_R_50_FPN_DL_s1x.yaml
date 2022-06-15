@@ -1,0 +1,11 @@
+_BASE_: "Base-RCNN-FPN.yaml"
+MODEL:
+  WEIGHTS: "ImageNetPretrained/MSRA/R-50.pkl"
+  RESNETS:
+    DEPTH: 50
+  ROI_DENSEPOSE_HEAD:
+    NAME: "DensePoseDeepLabHead"
+SOLVER:
+  # MAX_ITER: 130000
+  MAX_ITER: 15000
+  STEPS: (100000, 120000)

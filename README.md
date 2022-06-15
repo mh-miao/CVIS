@@ -22,5 +22,47 @@ python partgcn.py
 python refine_inpainting.py
 ```
 The pretrained model can be downloaded at [Google Drive](https://drive.google.com/file/d/1GhF1bSdcDPwG4wme8RJsDL5nZyFrkxIu/view?usp=sharing)
+
+## Vehicle Parsing Network
+This code is based on detectron2(densepose) but modified to realize canonical point regression module and dimension[w, h, l] regression module.
+```
+cd VehicleParsing
+```
+### Requirements
+- python3.6, cuda10.0
+- detectron2 0.2.0
+### Training
+```
+mkdir -p ImageNetPretrained/MSRA
+```
+Download the pretrained model at [URL1](https://drive.google.com/file/d/10rggOtosWStS9WzD4ydbWB5X8JgG9WPa/view?usp=sharing) [URL2](https://drive.google.com/file/d/1HYj6IaAAgsVZcgxeheBqndsjgpvXaBEL/view?usp=sharing) and put these model in ./ImageNetPretrained/MSRA 
+
+
+```
+python train_net.py --config-file configs/***.yaml  --num-gpu N
+```
+### Parsing
+- 2D Parsing
+```
+mkdir model
+
+python apply_net.py dump configs/rcnn_R_101_FPN_DL_s1x.yaml ./model/parsing2d.pth ./img_demo --output model_output/parsing2d.pkl -v
+
+mkdir -p result/parsing_2d
+
+python solve_pose.py
+```
+The pretrained model can be downloaded at [Google Drive](https://drive.google.com/file/d/1oP5Sj2BV_RsYNMVoe9-WfwD5lGBxRsw8/view?usp=sharing) and put the model in ./model
+- 3D Parsing
+```
+python apply_net.py dump configs/rcnn_R_50_FPN_DL_s1x.yaml ./model/parsing3d.pth ./img_demo --output model_output/parsing3d.pkl -v
+
+mkdir -p result/parsing_3d
+
+python solve_pose.py --pose_est
+```
+The pretrained model can be downloaded at [Google Drive](https://drive.google.com/file/d/1wqXmMGUa6281qZUmy0yAX5_Mql5kTCAq/view?usp=sharing) and put the model in ./model
+## Dataset
+Our data involves privacy, and if you want to require it, please contact us directly.
 ## Contact
-For questions regarding our work, please contact the authors (miaohui_@buaa.edu.cn).
+For questions regarding our work, feel free to post here or directly contact the authors (miaohui_@buaa.edu.cn).
