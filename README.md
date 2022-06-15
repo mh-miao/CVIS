@@ -30,7 +30,7 @@ cd VehicleParsing
 ```
 ### Requirements
 - python3.6, cuda10.0
-- detectron2 0.2.0
+- detectron2 0.1.1
 ### Training
 ```
 mkdir -p ImageNetPretrained/MSRA
